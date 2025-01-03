@@ -1,0 +1,4 @@
+.vs/
+VulkanEngine/x64/Debug/
+*.exe
+*.pdb

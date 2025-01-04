@@ -2,3 +2,7 @@
 /.idea/
 /cmake-build-debug/
 /VulkanEngine
+/CMakeFiles
+cmake_install.cmake
+Makefile
+CMakeCache.txt

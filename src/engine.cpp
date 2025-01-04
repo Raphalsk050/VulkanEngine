@@ -17,6 +17,9 @@ void Engine::initVulkan()
 {
     instance_ = new VulkanInstance();
     instance_->createInstance();
+    instance_->pickPhysicalDevice();
+    instance_->createLogicalDevice();
+    instance_->createGraphicsPipeline();
 }
 
 void Engine::mainLoop()

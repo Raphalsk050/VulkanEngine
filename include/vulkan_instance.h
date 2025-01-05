@@ -11,8 +11,7 @@
 #define GLFW_INCLUDE_VULKAN
 #define GLFW_EXPOSE_NATIVE_WIN32
 
-struct QueueFamilyIndices
-{
+struct QueueFamilyIndices {
     std::optional<uint32_t> graphicsFamily;
 
     bool isComplete() {
@@ -20,25 +19,31 @@ struct QueueFamilyIndices
     }
 };
 
-class VulkanInstance
-{
+class VulkanInstance {
 private:
     VkInstance instance;
     VkDevice device;
     VkQueue graphicsQueue;
     VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
+
     bool isDeviceSuitable(VkPhysicalDevice device);
+
     QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device);
 
 public:
     VkResult createInstance();
+
     bool checkValidationLayerSupport();
+
     void cleanup();
+
     void pickPhysicalDevice();
+
     void createLogicalDevice();
+
     void createGraphicsPipeline();
 
-    const std::vector<const char*> validationLayers = {
+    const std::vector<const char *> validationLayers = {
         "VK_LAYER_KHRONOS_validation"
     };
 

@@ -7,16 +7,12 @@
 #include "../include/vulkan_instance.h"
 #include "../include/engine.h"
 
-int main()
-{
+int main() {
     Engine app;
 
-    try
-    {
+    try {
         app.run();
-    }
-    catch (const std::exception& e)
-    {
+    } catch (const std::exception &e) {
         std::cerr << e.what() << std::endl;
         return EXIT_FAILURE;
     }
